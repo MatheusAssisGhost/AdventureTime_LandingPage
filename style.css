@@ -1,0 +1,133 @@
+@charset "utf-08";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(imagens/cozy_forest_home_animated_by_pixelhommet_descosh.gif);
+    background-size: auto;
+    /* background-repeat: no-repeat; */
+    background-attachment: fixed;
+}
+
+.litch{
+    width: 30px;
+    position: absolute;
+    right: 10px;
+    bottom: 20px;
+}
+
+.div_header {
+    margin: 30px auto;
+    background-color: rgba(240, 255, 255, 0.674);
+    width: 600px;
+    height: 100px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+.box_header {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav_bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.menu_list_header {
+    text-decoration: none;
+}
+
+.div_container {
+    background-color: rgba(166, 248, 229, 0.807);
+    width: 90%;
+    height: 50vh;
+    margin: auto;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    animation-name: border;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes border {
+    0%{
+        box-shadow: 5px 5px 10px lightblue;
+    }
+
+    25%{
+        box-shadow: 0px 5px 10px lightblue;
+    }
+
+    50%{
+        box-shadow: -5px 0px 10px lightblue;
+    }
+
+    75%{
+        box-shadow: -5px -5 10px lightblue;
+    }
+
+    100%{
+        box-shadow: 5px -5px 10px lightblue;
+    }
+    
+}
+
+.img_gif {
+    width: 300px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.section_container {
+    width: 300px;
+    background-color: azure;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.list_box {
+    color: rgba(255, 255, 255, 0.664);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.list_request {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    list-style: none;
+    font-size: 1.2em;
+}
+
+input {
+    border-radius: 20px;
+    padding: 5px;
+    border: 1px solid lightgray;
+    background-color: aliceblue;
+}
+
+.btn {
+    padding: 5px;
+}
