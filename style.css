@@ -1,4 +1,5 @@
 @charset "utf-08";
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Great+Vibes&family=Nanum+Myeongjo&family=Rubik+Mono+One&family=Silkscreen:wght@400;700&display=swap');
 
 * {
     margin: 0;
@@ -8,12 +9,50 @@
 
 body {
     background-image: url(imagens/cozy_forest_home_animated_by_pixelhommet_descosh.gif);
-    background-size: auto;
+    background-size: 150%;
     /* background-repeat: no-repeat; */
     background-attachment: fixed;
+    overflow-x: hidden;
 }
 
-.litch{
+.animation {
+    width: 100px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.img_animation {
+    position: relative;
+    animation-name: canelinha;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-delay: 3s;
+    left: 50px;
+}
+
+@keyframes canelinha {
+    From {
+        transform: translateX(-100vw);
+    }
+
+    to {
+        transform: translateX(100vw);
+    }
+
+}
+
+.div_licth {
+    width: 30px;
+    width: 30px;
+    position: absolute;
+    right: 10px;
+    bottom: 20px;
+}
+
+.litch {
     width: 30px;
     position: absolute;
     right: 10px;
@@ -21,17 +60,20 @@ body {
 }
 
 .div_header {
+    background-repeat: no-repeat;
+    background-size: auto;
     margin: 30px auto;
-    background-color: rgba(240, 255, 255, 0.674);
+    background-image: linear-gradient(to left, rgba(166, 248, 229, 0.837), rgba(255, 255, 255, 0.826));
     width: 600px;
-    height: 100px;
-    border-radius: 30px;
+    height: auto;
+    border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-left: 2px solid white;
-    border-bottom: 2px solid white;
+    padding: 10px;
 }
+
+
 
 .box_header {
     text-align: center;
@@ -47,13 +89,26 @@ body {
     gap: 50px;
 }
 
+.title_main {
+    font-family: 'Nanum Myeongjo';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    font-size: 3em;
+}
+
 .menu_list_header {
     text-decoration: none;
 }
 
+main {
+    overflow: hidden;
+    width: 100vw;
+}
+
 .div_container {
-    background-color: rgba(166, 248, 229, 0.807);
-    width: 90%;
+    background-image: linear-gradient(to left, rgba(166, 248, 229, 0.837), rgba(255, 255, 255, 0.826));
+    width: 60%;
     height: 50vh;
     margin: auto;
     border-radius: 20px;
@@ -66,26 +121,26 @@ body {
 }
 
 @keyframes border {
-    0%{
+    0% {
         box-shadow: 5px 5px 10px lightblue;
     }
 
-    25%{
+    25% {
         box-shadow: 0px 5px 10px lightblue;
     }
 
-    50%{
+    50% {
         box-shadow: -5px 0px 10px lightblue;
     }
 
-    75%{
+    75% {
         box-shadow: -5px -5 10px lightblue;
     }
 
-    100%{
+    100% {
         box-shadow: 5px -5px 10px lightblue;
     }
-    
+
 }
 
 .img_gif {
@@ -93,9 +148,18 @@ body {
 }
 
 .container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     justify-content: space-around;
     align-items: center;
+}
+
+.container_login{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
 }
 
 .section_container {
@@ -103,6 +167,23 @@ body {
     background-color: azure;
     padding: 20px;
     border-radius: 20px;
+    border: 1px inset rgb(235, 234, 234);
+    box-shadow: 2px 2px 5px black;
+
+}
+
+.image_section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cad_title {
+    font-family: 'Nanum Myeongjo';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
 }
 
 .list_box {
@@ -119,6 +200,10 @@ body {
     text-decoration: none;
     list-style: none;
     font-size: 1.2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 input {
@@ -130,4 +215,26 @@ input {
 
 .btn {
     padding: 5px;
+}
+
+.img_logo {
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+}
+
+.img_logo_main{
+    width: 150px;
+}
+
+.div_login{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.icon_login{
+    width: 30px;
 }
